@@ -6,10 +6,10 @@
 <title>스티커 사진관 2003</title>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 <style>
-:root{--sky:#bfe6ff;--dot:#ffd9ea;--card:#fff;--ink:#4a2a55;--pink:#ff6fb5;--baby:#ffc4dc;--soft:#fff0f7;
+:root{--sky:#bfe6ff;--dot:#ffd9ea;--card:#fff;--ink:#4a2a55;--pink:#ffaad3;--baby:#ffc4dc;--soft:#fff0f7;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--sky:#1c2f55;--dot:#5a3a6b;--card:#2a2147;--ink:#ffe8f5;--pink:#ff82c0;--baby:#c77aa6;--soft:#3a2b5c}}
-:root[data-theme="dark"]{color-scheme:dark;--sky:#1c2f55;--dot:#5a3a6b;--card:#2a2147;--ink:#ffe8f5;--pink:#ff82c0;--baby:#c77aa6;--soft:#3a2b5c}
+:root[data-theme="dark"]{color-scheme:dark;--sky:#1c2f55;--dot:#5a3a6b;--card:#2a2147;--ink:#ffe8f5;--pink:#ffaad3;--baby:#c77aa6;--soft:#3a2b5c}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background-color:var(--sky);background-image:radial-gradient(circle,var(--dot) 22%,transparent 25%),radial-gradient(circle,var(--dot) 22%,transparent 25%);background-size:16px 16px;background-position:0 0,8px 8px;color:var(--ink);font-family:"Jua","Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:16px}
@@ -180,11 +180,11 @@ sticker=CATS['리본'][0];
 /* ---------- frames (cute character borders) ---------- */
 const FR=[{n:'없음'},
 {n:'스위트 베이커리',t:'Sweet Bakery',bg:'#cdf0a8',pat:1,pc:'#a6e07a',m:['🍓','🧁','🍰','🍩','🍒'],f:0},
-{n:'러블리',t:'Lovely',bg:'#ffc4dc',pat:2,pc:'#fff',m:['🎀','💖','🌸','💗','🍬'],f:1},
-{n:'소큐트',t:'So Cute',bg:'#3b2a4a',pat:3,pc:'#fff',m:['💗','🎀','⭐','💖'],f:2,tc:'#ff7ab8'},
-{n:'해피',t:'HAPPY!',bg:'#fff1a8',pat:4,pc:'#ffcf3a',m:['⭐','🌈','☁️','🍭','🌟'],f:3},
-{n:'프렌즈',t:'Friends',bg:'#bfe3ff',pat:5,pc:'#fff',m:['☁️','💙','🐻','🐰','🌷'],f:4,tc:'#4d8dff'},
-{n:'드리미',t:'Dreamy',bg:'#e6d6ff',pat:6,pc:'#fff',m:['✨','🦋','🌙','💜','🎀'],f:5,tc:'#9a6bff'}];
+{n:'러블리',t:'Lovely',bg:'#ffc4dc',pat:2,pc:'#fff',m:['🍧','🍡','🩰','💗','🥣'],f:1},
+{n:'소큐트',t:'So Cute',bg:'#3b2a4a',pat:3,pc:'#fff',m:['🍮','🎀','⭐','💖'],f:2,tc:'#ff7ab8'},
+{n:'해피',t:'HAPPY!',bg:'#fff1a8',pat:4,pc:'#ffcf3a',m:['⭐','🍎','☁️','🫧','🧃'],f:3},
+{n:'프렌즈',t:'Friends',bg:'#bfe3ff',pat:5,pc:'#fff',m:['🐱','🐻‍❄️','🐻','🐰','🐼'],f:4,tc:'#4d8dff'},
+{n:'드리미',t:'Dreamy',bg:'#e6d6ff',pat:6,pc:'#fff',m:['🍼','💒','🌙','💍','🎀'],f:5,tc:'#9a6bff'}];
 const fcache={};
 function frameImg(k){if(!k)return null;if(fcache[k])return fcache[k];const f=FR[k],o=el('canvas');o.width=W;o.height=H;const c=o.getContext('2d'),bw=72;
 c.save();c.beginPath();c.rect(0,0,W,H);c.roundRect(bw,bw,W-2*bw,H-2*bw,28);c.clip('evenodd');c.fillStyle=f.bg;c.fillRect(0,0,W,H);c.fillStyle=f.pc;
